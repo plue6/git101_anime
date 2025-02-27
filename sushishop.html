@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำอนิเมะญี่ปุ่น</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .anime-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .anime-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .anime-card:hover {
+            transform: scale(1.05);
+        }
+        .anime-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .anime-info {
+            padding: 15px;
+        }
+        .anime-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .anime-description {
+            font-size: 16px;
+            color: #555;
+        }
+        .anime-detail {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .anime-detail img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>แนะนำอนิเมะญี่ปุ่น</h1>
+</header>
+
+<div class="anime-container">
+    <div class="anime-card" onclick="showDetail('attack-on-titan')">
+        <img src="https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc2MjkyMDU2MDI0MDk3OTY1/attack-on-titan-analysis-the-culture-of-complacency.jpg" alt="Attack on Titan" class="anime-image">
+        <div class="anime-info">
+            <h2 class="anime-title">Attack on Titan</h2>
+            <p class="anime-description">เรื่องราวของมนุษย์ที่ต้องต่อสู้กับยักษ์ขนาดยักษ์ที่คุกคามโลกของพวกเขา</p>
+        </div>
+    </div>
+
+    <div class="anime-card" onclick="showDetail('my-hero-academia')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTleGMyxUJoHvynGVs76mvwzaer71W8_oaBeg&s" alt="My Hero Academia" class="anime-image">
+        <div class="anime-info">
+            <h2 class="anime-title">My Hero Academia</h2>
+            <p class="anime-description">เด็กหนุ่มที่ต้องการจะเป็นฮีโร่ในโลกที่เต็มไปด้วยคนที่มีพลังพิเศษ</p>
+        </div>
+    </div>
+
+    <div class="anime-card" onclick="showDetail('demon-slayer')">
+        <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/8/2024/06/17180700/demon_slayer_all_arc_f.jpg?tr=w-1200,h-900" alt="Demon Slayer" class="anime-image">
+        <div class="anime-info">
+            <h2 class="anime-title">Demon Slayer</h2>
+            <p class="anime-description">เด็กหนุ่มที่ต้องต่อสู้กับปีศาจหลังจากที่ครอบครัวของเขาถูกฆ่า</p>
+        </div>
+    </div>
+</div>
+
+<!-- รายละเอียดของอนิเมะทั้งหมด -->
+<div id="attack-on-titan" class="anime-detail">
+    <h2 class="anime-title">Attack on Titan</h2>
+    <p class="anime-description">Attack on Titan เป็นอนิเมะที่เกิดขึ้นในโลกที่มนุษย์ต้องต่อสู้กับยักษ์ขนาดใหญ่ที่คุกคามมนุษยชาติ เรื่องราวเริ่มต้นจากเด็กหนุ่มชื่อเอนโดะ เอเลีย ที่ต้องเผชิญกับการทำลายล้างของยักษ์ในเมืองที่เขาอาศัยอยู่ หลังจากนั้นเขาก็ได้เรียนรู้ถึงการต่อสู้และความลับที่ซ่อนอยู่ในโลกของพวกเขา</p>
+    <img src="https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc2MjkyMDU2MDI0MDk3OTY1/attack-on-titan-analysis-the-culture-of-complacency.jpg" alt="Attack on Titan">
+</div>
+
+<div id="my-hero-academia" class="anime-detail">
+    <h2 class="anime-title">My Hero Academia</h2>
+    <p class="anime-description">My Hero Academia เล่าเรื่องราวของเด็กหนุ่มชื่ออิซึกิ มิเดรียที่อยากจะเป็นฮีโร่ในโลกที่เต็มไปด้วยผู้คนที่มีพลังพิเศษ. เขาต้องเผชิญกับอุปสรรคต่างๆ ในการเรียนรู้และการฝึกฝนเพื่อที่จะเป็นฮีโร่ที่ดีที่สุด.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTleGMyxUJoHvynGVs76mvwzaer71W8_oaBeg&s" alt="My Hero Academia">
+</div>
+
+<div id="demon-slayer" class="anime-detail">
+    <h2 class="anime-title">Demon Slayer</h2>
+    <p class="anime-description">Demon Slayer เป็นเรื่องราวของเด็กหนุ่มชื่อทันจิโร่ ที่ต้องต่อสู้กับปีศาจที่ฆ่าครอบครัวของเขาและทำให้妹 (น้องสาว) ของเขากลายเป็นปีศาจ. เขาจึงออกเดินทางเพื่อหาวิธีรักษาน้องสาวและต่อสู้กับปีศาจอื่นๆ ในระหว่างการเดินทาง.</p>
+    <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/8/2024/06/17180700/demon_slayer_all_arc_f.jpg?tr=w-1200,h-900" alt="Demon Slayer">
+</div>
+
+<script>
+    // ฟังก์ชันในการแสดงรายละเอียดอนิเมะ
+    function showDetail(anime) {
+        // ซ่อนทุกๆ รายละเอียด
+        var details = document.querySelectorAll('.anime-detail');
+        details.forEach(function(detail) {
+            detail.style.display = 'none';
+        });
+
+        // แสดงรายละเอียดที่เลือก
+        var selectedDetail = document.getElementById(anime);
+        selectedDetail.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
